@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6eee8">
+  <meta name="description" content="一封会抽奖的情书，藏着诗、照片和下一次见面的约定。">
+  <title>给你的心动扭蛋</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <section class="opening" id="opening" aria-label="给你的信">
+    <div class="opening-photo" role="img" aria-label="海边的一张照片"></div>
+    <div class="opening-shade"></div>
+    <div class="opening-top"><span>TO MY FAVOURITE PERSON</span><span>✦ 只给你</span></div>
+    <div class="opening-content">
+      <p class="eyebrow light">一封会抽奖的情书</p>
+      <h1>把喜欢，<br><em>藏进一颗扭蛋。</em></h1>
+      <p class="opening-intro">诗句是别人写的，想和你见面的心情是我的。</p>
+      <button class="enter-button" id="enterButton" type="button">拆开这份好运 <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="opening-bottom">01 / 17 &nbsp; · &nbsp; 往下，是给你的心动存档</div>
+  </section>
+
+  <main id="machineSection">
+    <section class="machine-section" aria-labelledby="machineTitle">
+      <div class="section-head">
+        <p class="eyebrow">HEART CAPSULE · 01</p>
+        <h2 id="machineTitle">今天，要抽走<br><em>哪一点心动？</em></h2>
+        <p>每颗都装着一句诗，或者一个想和你一起完成的小愿望。</p>
+      </div>
+      <div class="machine-wrap">
+        <span class="orbit orbit-one" aria-hidden="true">✦</span><span class="orbit orbit-two" aria-hidden="true">✧</span>
+        <div class="machine" id="machine" aria-hidden="true">
+          <div class="machine-glass">
+            <span class="capsule cap-one"></span><span class="capsule cap-two"></span><span class="capsule cap-three"></span>
+            <span class="capsule cap-four"></span><span class="capsule cap-five"></span><span class="capsule cap-six"></span>
+            <span class="glass-shine"></span>
+          </div>
+          <div class="machine-neck"></div>
+          <div class="machine-body"><div class="machine-knob">♡</div><div class="machine-slot"></div></div>
+          <div class="machine-foot"></div>
+        </div>
+        <p class="machine-caption">一颗一颗地抽，喜欢不会重复敷衍。</p>
+        <button class="draw-button" id="drawButton" type="button">抽一颗给我的心动 <span aria-hidden="true">✧</span></button>
+        <p class="draw-count" id="drawCount" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="keepsakes" id="keepsakes" aria-labelledby="keepsakesTitle">
+      <div class="section-head compact">
+        <p class="eyebrow">A LITTLE GALLERY · 02</p>
+        <h2 id="keepsakesTitle">把喜欢你的瞬间，<br><em>再看一遍。</em></h2>
+        <p>左右轻轻滑动。照片里的每个你，我都想好好收藏。</p>
+      </div>
+      <div class="photo-rail" id="photoRail" aria-label="照片胶片"></div>
+      <div class="rail-controls"><button id="prevPhoto" type="button" aria-label="上一张照片">←</button><span id="photoCounter">01 / 17</span><button id="nextPhoto" type="button" aria-label="下一张照片">→</button></div>
+    </section>
+
+    <section class="letter-end">
+      <span class="end-star" aria-hidden="true">✦</span>
+      <p>如果你也喜欢这份小礼物，<br>下次见面，就告诉我你抽到了哪一颗。</p>
+      <span class="end-sign">永远期待见到你的我</span>
+    </section>
+  </main>
+
+  <div class="reveal" id="reveal" hidden>
+    <div class="reveal-backdrop" id="revealBackdrop"></div>
+    <section class="reveal-panel" role="dialog" aria-modal="true" aria-labelledby="revealQuote">
+      <button class="close-reveal" id="closeReveal" type="button" aria-label="关闭卡片">×</button>
+      <div class="reveal-photo" id="revealPhoto"></div>
+      <div class="reveal-card">
+        <p class="reveal-type" id="revealType"></p>
+        <div class="small-ornament">✧ &nbsp; ♡ &nbsp; ✧</div>
+        <blockquote id="revealQuote"></blockquote>
+        <p class="translation" id="revealTranslation" hidden></p>
+        <a class="author" id="revealAuthor" target="_blank" rel="noopener noreferrer"></a>
+        <button class="keep-button" id="keepButton" type="button">收下这颗心动 ♡</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
